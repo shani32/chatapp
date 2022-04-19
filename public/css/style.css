@@ -1,11 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
 :root {
-	--dark-color-a: #ce40a3;
+	--dark-color-a:#BF6195 ;
 	--dark-color-b: #660e4c;
 	--light-color: #e6e9ff;
-	--success-color: #5cb85c;
-	--error-color: #d9534f;
 }
 
 * {
@@ -15,13 +11,13 @@
 }
 html{
     width: 100vw;
-    height: 100%;
+    height: 100vh;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	font-size: 16px;
-	background-image: url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Background.max-1300x1300.jpg');
+	background-image: url('https://airwallpaper.com/wp-content/uploads/wall003/Clouds-Backgrounds.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -39,10 +35,25 @@ a {
 .btn {
 	cursor: pointer;
 	padding: 5px 15px;
-	background: var(--light-color);
-	color: var(--dark-color-a);
+	background: var(--dark-color-a);
+	color: var(--light-color);
 	border: 0;
 	font-size: 17px;
+    font-weight: bold;
+    
+}
+.btn-join{
+  border:  2px solid black;  
+}
+.btn-send:hover{
+background-color: var(--dark-color-b)
+}
+.btn-switch{
+background-color: var(--dark-color-b); 
+}
+.btn-switch:hover{
+background-color: var(--light-color);
+color: #660e4c; 
 }
 
 

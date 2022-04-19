@@ -11,7 +11,7 @@ const io=socketio(server)
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-const bot='admin'
+const bot='Admin'
 //new connection
 io.on('connection',socket=>{
 
