@@ -13,11 +13,18 @@
 	margin: 0;
 	padding: 0;
 }
+html{
+    width: 100vw;
+    height: 100%;
+}
 
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
+	background-image: url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Background.max-1300x1300.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 	margin: 20px;
 }
 
@@ -41,9 +48,11 @@ a {
 
 /* Home Page */
 .container {
-	max-width: 500px;
-	margin: 80px auto;
+	max-width: 750px;
+    /* height: 600px; */
+	margin: 120px auto;
 	color: #fff;
+   
 }
 
 .header {
@@ -57,6 +66,7 @@ a {
 .main {
 	padding: 30px 40px;
 	background: var(--dark-color-b);
+    
 }
 
 .main p {
@@ -65,6 +75,7 @@ a {
 
 .main .form-control {
 	margin-bottom: 20px;
+    border-radius: 12px;
 }
 
 .main label {
@@ -90,13 +101,15 @@ a {
 	margin-top: 20px;
 	width: 100%;
 }
+
 /* Chat Page */
 
 .chat-container {
 	max-width: 1100px;
 	background: #fff;
-	margin: 30px auto;
+	margin: 150px auto;
 	overflow: hidden;
+    border-radius: 12px;
 }
 
 .chat-header {

@@ -19,9 +19,15 @@ io.on('connection',socket=>{
         const user=userJoinToChat(socket.id, username, room)
         socket.join(user.room)
     
-    socket.emit('message', formatMessage(bot, 'welcome my dear friend') )
+    socket.emit('message', formatMessage(bot, 'welcome to our chat :)') )
 
     socket.broadcast.to(user.room).emit('message', formatMessage(bot, `${user.username} has joined the party`))
+        //send users and room info
+        io.to(user.room).emit('roomUsers', {
+            room:user.room,
+            users:getUsersRoom(user.room)
+        })
+
     })
    
 
@@ -35,6 +41,10 @@ io.on('connection',socket=>{
         const user= userLeave(socket.id)
         if(user){
          io.to(user.room).emit('message', formatMessage(bot, `${user.username} has left the building`) )   
+         io.to(user.room).emit('roomUsers', {
+            room:user.room,
+            users:getUsersRoom(user.room)
+        })
         }
         
     })
