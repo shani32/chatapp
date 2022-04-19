@@ -5,6 +5,7 @@ const socketio=require('socket.io')
 const formatMessage=require('./utiles/messages')
 const {getUser, userJoinToChat, getUsersRoom, userLeave}= require('./utiles/users')
 
+
 const app= express()
 const server= http.createServer(app)
 const io=socketio(server)
